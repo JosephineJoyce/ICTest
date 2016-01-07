@@ -6,6 +6,13 @@ var cors = require('cors');
 
 //Setup Cloudant Service.
 var appEnv = cfenv.getAppEnv();
+console.log("appEnv is "+appEnv);
+var out = '';
+ for (var p in appEnv) {
+    out += p + ': ' + appEnv[p] + '\n';
+  }
+  console.log("out is  "+out);
+
 cloudantService = appEnv.getService("CatalogueCloudant");
 var catalogue = require('./routes/catalogue');
 
