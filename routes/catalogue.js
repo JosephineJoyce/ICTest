@@ -41,6 +41,7 @@ exports.find = function(req, res) {
 
 //list all the database contents.
 exports.list = function(req, res) {
+var docList = [];
     db.list({include_docs: true}, function (err, body, headers) {
     if (!err) {
         //res.send(body);
