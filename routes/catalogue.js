@@ -56,6 +56,15 @@ exports.list = function(req, res) {
 					docList.push(responseData);
 					i++;
 					if(i >= len) {
+						
+						var out = '';
+
+  for (var p in docList) {
+    out += p + ': ' + docList[p] + '\n';
+  }
+  console.log("docList in catalogue is "+out);
+						
+						
 						response.write(JSON.stringify(docList));
 						console.log('ending response...');
 						response.end();
