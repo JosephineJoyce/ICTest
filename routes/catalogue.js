@@ -13,6 +13,19 @@ exports.create = function(req, res) {
         });
     }
     
+function createResponseData(id, name, quantity, description, dollarprice) {
+
+	var responseData = {
+		"id" : id,
+		"name" : name,
+		"quantity" : quantity,
+		"description":description,
+		"dollarprice":dollarprice
+		
+	};
+	return responseData;
+}
+    
 //find an item by ID.
 exports.find = function(req, res) {
     var id = req.params.id;
@@ -30,7 +43,29 @@ exports.find = function(req, res) {
 exports.list = function(req, res) {
     db.list({include_docs: true}, function (err, body, headers) {
     if (!err) {
-        res.send(body);
+        //res.send(body);
+        body.rows.forEach(function(document) {
+			db.get(document.id, { revs_info: true }, function(err, doc) {
+				if (!err) {
+					var responseData = createResponseData(
+							doc._id,
+							doc.customerId,
+							doc.itemId,
+							doc.count
+							);
+					docList.push(responseData);
+					i++;
+					if(i >= len) {
+						response.write(JSON.stringify(docList));
+						console.log('ending response...');
+						response.end();
+					}
+				} else {
+					console.log(err);
+				}
+			});
+			
+		});
         return;
     }
     else res.send({msg:'Error listing items: ' + err});
