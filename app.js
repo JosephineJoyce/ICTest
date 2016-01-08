@@ -32,5 +32,9 @@ app.post('/items', catalogue.create);
 app.put('/items/:id', catalogue.update);
 app.delete('/items/:id', catalogue.remove);
 
-app.listen(appEnv.port, appEnv.bind);
-console.log('App started on ' + appEnv.bind + ':' + appEnv.port)
+
+var port = (process.env.VCAP_APP_PORT || 3000),
+host = (process.env.VCAP_APP_HOST || 'localhost');
+console.log("port is "+port+" host is "+host);
+app.listen(port, host);
+//console.log('App started on ' + appEnv.bind + ':' + appEnv.port)

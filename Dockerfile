@@ -4,6 +4,6 @@ WORKDIR /node
 RUN npm install
 EXPOSE 80
 EXPOSE 443
-EXPOSE 6001
+EXPOSE 3000
 ENTRYPOINT ["node", "/node/app.js"]
 #test
