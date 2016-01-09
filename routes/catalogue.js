@@ -13,14 +13,15 @@ exports.create = function(req, res) {
         });
     }
     
-function createResponseData(id, name, quantity, description, dollarprice) {
+function createResponseData(id, name, manufacturer, quantity, description, price) {
 
 	var responseData = {
 		"id" : id,
 		"name" : name,
+		"manufacturer" : manufacturer,
 		"quantity" : quantity,
 		"description":description,
-		"dollarprice":dollarprice
+		"price":dollarprice
 		
 	};
 	return responseData;
@@ -54,29 +55,14 @@ var i = 0;
 					var responseData = createResponseData(
 							doc._id,
 							doc.name,
+							doc.manufacturer,							
 							doc.quantity,
 							doc.description,
-							doc.usaDollarPrice												
+							doc.price												
 							);
-					var out1 = '';
-
-  for (var p in responseData) {
-    out1 += p + ': ' + responseData[p] + '\n';
-  }
-  console.log("responseData in catalogue is "+out1);
-  
-  
 					docList.push(responseData);
 					i++;
 					if(i >= len) {
-						
-						var out = '';
-
-  for (var p in docList) {
-    out += p + ': ' + docList[p] + '\n';
-  }
-  console.log("docList in catalogue is "+out);
-						
 						
 						res.write(JSON.stringify(docList));
 						console.log('ending response...');

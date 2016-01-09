@@ -19,60 +19,60 @@ populateDB = function() {
 
     var products = [
     {
-        name: 'War Room Table',
-        color: 'tan',
+        name: 'AMANTREL CAPSULE 10S',
+        manufacturer: 'CIPLA LIMITED',
         quantity: 5,
-        description: 'A Beautiful War Room table, perfect for collaborative work spaces!',
-        usaDollarPrice: 180.00
+        description: 'Amantadine',
+        price: 115.00
     },
     {
-        name: 'Foosball Table',
-        color: 'white',
-        quantity: 53,
-        description: 'Wooden table, some assembly required.',
-        usaDollarPrice: 125.99
+        name: 'PARKITIDIN TABLET 10'S',
+        manufacturer: 'SUN PHARMACEUTICAL INDUSTRIES LTD',
+        quantity: 5,
+        description: 'Amantadine',
+        price: 78.00
     },
     {
-        name: 'Ping pong table',
-        color: 'green',
+        name: 'METFIRST T 50MG TABLET 10S',
+        manufacturer: 'SINSAN PHARMACEUTICALS',
+        description: 'Metoprolol+Telmisartan',
         quantity: 7,
-        description: 'A very sturdy ping pong table. Includes 2 paddles and a regulation sized net.',
-        usaDollarPrice: 199.99
+        price: 199.99
     },  
     {
-        name: 'IBM Coffee Beans',
-        color: 'brown',
-        quantity: 155,
-        description: 'These have been fueling IBMers for ages!',
-        usaDollarPrice: 15.00
+        name: 'TELMIVAS M 50MG TABLET 10S',
+        manufacturer: 'MANO PHARMACEUTICALS PVT LTD',
+        quantity: 94,
+        description: 'Metoprolol+Telmisartan',
+        price: 15.00
     },
     {
-        name: 'Ping pong balls',
-        color: 'white',
+        name: 'TELEACT BETA 50MG TABLET 10S',
+        color: 'RANBAXY LABORATORIES LTD',
         quantity: 97,
-        description: '3 star ping pong balls, regulation size.',
-        usaDollarPrice: 12.00
+        description: 'Metoprolol+Telmisartan',
+        price: 95.00
     },
     {
-        name: 'Travel Backpack',
-        color: 'green',
+        name: 'GLYCIPHAGE G1 TABLET 10S',
+        manufacturer: 'FRANCO INDIAN PHARMACEUTICALS PVT LTD',
         quantity: 64,
-        description: 'This backpack is perfect for traveling.',
-        usaDollarPrice: 49.99
+        description: 'Glimepiride+Metformin',
+        price: 49.99
     },
     {
-        name: 'Monitor',
-        color: 'white',
+        name: 'FLUNER 10MG TABLET 10S',
+        manufacturer: 'GENO PHARMACEUTICALS LIMITED',
         quantity: 24,
-        description: 'A computer monitor.',
-        usaDollarPrice: 159.99
+        description: 'Flunarizine',
+        price: 45.99
     },
     {
-        name: 'Water Bottle',
-        color: 'orange, blue, yellow',
+        name: 'GRENIL F 10MG TABLET 10S',
+        manufacturer: 'KARNATAKA ANTIBIOTIC & PHAMACEUTICALS LTD',
         quantity: 71,
-        description: '3 different colors to match your personality!',
-        usaDollarPrice: 19.99
+        description: 'Flunarizine',
+        price: 19.99
     }];
 
     for(p in products){
