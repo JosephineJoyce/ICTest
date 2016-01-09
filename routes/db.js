@@ -26,7 +26,7 @@ populateDB = function() {
         price: 115.00
     },
     {
-        name: 'PARKITIDIN TABLET 10'S',
+        name: 'PARKITIDIN TABLET 10S',
         manufacturer: 'SUN PHARMACEUTICAL INDUSTRIES LTD',
         quantity: 5,
         description: 'Amantadine',
