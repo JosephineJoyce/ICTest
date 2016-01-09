@@ -53,9 +53,11 @@ var i = 0;
 				if (!err) {
 					var responseData = createResponseData(
 							doc._id,
-							doc.customerId,
-							doc.itemId,
-							doc.count
+							doc.name,
+							doc.color,
+							doc.quantity,
+							doc.description,
+							doc.usaDollarPrice												
 							);
 					var out1 = '';
 
