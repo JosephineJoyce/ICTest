@@ -1,8 +1,10 @@
 cloudant = require('cloudant')(cloudantService.credentials.url);
+console.log("CatalogueCloudant is "+cloudant);
 db = cloudant.use('items');
 
 //Initiate the database.
 initDB = function() {
+	console.log("init DB");
     cloudant.db.create('items', function(err, body){
     if(!err){
         populateDB();
