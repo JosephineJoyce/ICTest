@@ -46,6 +46,8 @@ var i = 0;
     db.list({include_docs: true}, function (err, body, headers) {
     if (!err) {
         //res.send(body);
+        var len = body.rows.length;
+		console.log('total # of docs -> '+len);
         body.rows.forEach(function(document) {
 			db.get(document.id, { revs_info: true }, function(err, doc) {
 				if (!err) {
