@@ -6,6 +6,8 @@ db = cloudant.use('items');
 initDB = function() {
 	console.log("init DB");
     cloudant.db.create('items', function(err, body){
+    console.log("err is "+err);
+    console.log("body is "+body);
     if(!err){
         populateDB();
         console.log('Successfully created database and populated!');
