@@ -69,9 +69,9 @@ var i = 0;
   console.log("docList in catalogue is "+out);
 						
 						
-						response.write(JSON.stringify(docList));
+						res.write(JSON.stringify(docList));
 						console.log('ending response...');
-						response.end();
+						res.end();
 					}
 				} else {
 					console.log(err);
