@@ -54,7 +54,6 @@ var i = 0;
 					var responseData = createResponseData(
 							doc._id,
 							doc.name,
-							doc.color,
 							doc.quantity,
 							doc.description,
 							doc.usaDollarPrice												
