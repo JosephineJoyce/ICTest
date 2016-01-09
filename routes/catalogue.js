@@ -57,6 +57,14 @@ var i = 0;
 							doc.itemId,
 							doc.count
 							);
+					var out1 = '';
+
+  for (var p in responseData) {
+    out1 += p + ': ' + responseData[p] + '\n';
+  }
+  console.log("responseData in catalogue is "+out1);
+  
+  
 					docList.push(responseData);
 					i++;
 					if(i >= len) {
