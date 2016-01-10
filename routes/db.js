@@ -1,5 +1,9 @@
 console.log("cloudantService.credentials.url is "+cloudantService.credentials.url);
-cloudant = require('cloudant')(cloudantService.credentials.url);
+require('cloudant')(cloudantService.credentials.url), function(err, cloudant) {
+  if (err) {
+    return console.log('Failed to initialize Cloudant: ' + err.message);
+  }
+
 console.log("CatalogueCloudant is "+cloudant);
 var db = null;
 
@@ -7,6 +11,11 @@ var db = null;
 //Initiate the database.
 initDB = function() {
 	console.log("init DB");
+	cloudant.db.list(function(err, allDbs) {
+  console.log('All my databases: %s', allDbs.join(', '))
+});
+
+
     cloudant.db.create('items', function(err, body){
     console.log("err is "+err);
     console.log("body is "+body);
