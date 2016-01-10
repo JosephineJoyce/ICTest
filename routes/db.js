@@ -1,4 +1,10 @@
+console.log("cloudantService.credentials.url is "+cloudantService.credentials.url);
 cloudant = require('cloudant')(cloudantService.credentials.url);
+var out = '';
+  for (var p in cloudant) {
+    out += p + ': ' + cloudant[p] + '\n';
+  }
+  console.log("cloduand object"+out);
 console.log("CatalogueCloudant is "+cloudant);
 db = cloudant.use('items');
 
