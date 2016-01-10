@@ -1,5 +1,5 @@
 require('./db');
-initDB();
+//initDB();
 
 //Create an item to add to the database.
 exports.create = function(req, res) {
@@ -21,7 +21,7 @@ function createResponseData(id, name, manufacturer, quantity, description, price
 		"manufacturer" : manufacturer,
 		"quantity" : quantity,
 		"description":description,
-		"price":dollarprice
+		"price":price
 		
 	};
 	return responseData;
