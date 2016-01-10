@@ -15,7 +15,8 @@ var db = null;
 initDB = function() {
 	console.log("init DB");
 	cloudant.db.list(function(err, allDbs) {
-  console.log('All my databases: %s', allDbs.join(', '))
+	console.log("all dbs is "+allDbs);
+  //console.log('All my databases: %s', allDbs.join(', '))
 });
 
 
