@@ -1,6 +1,6 @@
 console.log("cloudantService.credentials.url is "+cloudantService.credentials.url);
 cloudant = require('cloudant')(cloudantService.credentials.url);
-console.log("CatalogueCloudant is "+cloudant);
+console.log("MedKartDB is "+cloudant);
 db = cloudant.use('items');
 
 
