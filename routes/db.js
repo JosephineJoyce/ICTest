@@ -1,8 +1,11 @@
 console.log("cloudantService.credentials.url is "+cloudantService.credentials.url);
-require('cloudant')(cloudantService.credentials.url), function(err, cloudant) {
+require('cloudant')(cloudantService.credentials.url), function(err, cloudant1) {
   if (err) {
     return console.log('Failed to initialize Cloudant: ' + err.message);
   }
+  }
+  
+  cloudant = require('cloudant')(cloudantService.credentials.url);
 
 console.log("CatalogueCloudant is "+cloudant);
 var db = null;
